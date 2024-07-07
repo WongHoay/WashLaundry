@@ -48,7 +48,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 
 .login-form{
     background-color: #ffffff;
-    padding: 20px;
+    padding: 10px;
     border-radius:5px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
     width: auto;
@@ -78,7 +78,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 
 .login-input input{
-    width: 100%;
+    width:90%;
     padding:5px;
     border: 1px solid black;
     border-radius: 5px;
@@ -107,6 +107,7 @@ button{
     border-radius: 5px;
     font-size:12px;
     cursor:pointer;
+    
 }
 
 button:hover{

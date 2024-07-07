@@ -7,6 +7,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
     Author     : User
 */
 
+.head h1{
+    font-family: Arial;
+    text-align: center;
+    font-size: 36px;
+}
  
 
 .signup-container{

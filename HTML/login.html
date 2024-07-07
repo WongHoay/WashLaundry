@@ -8,46 +8,34 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this
         <title>Log In</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/login.css"/>
     </head>
     <body>
-        
+    <div class="title">
         <h2>Log In</h2>
-        &nbsp;
-        
-        <div class="container">
-            <table>
-                <tr>
-                    <td><label for="username"><b>Username</b></label></td>
-                    <td><input type="text" placeholder="Enter username"></td>
-                </tr>
-                
-                <tr>
-                    <td><label for="password"><b>Password</b></label></td>
-                    <td><input type="password" placeholder="Enter password"></td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <button type="submit"> LOGIN </button>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td><span class="psw">Forgot <a href="#">password?</a></span></td>
-                </tr>
-                
-                <tr>
-                    <td></td>
-                    <td>Don't have an account? <button>Sign Up</button></td>
-                </tr>
-                
-                
-            </table>
+    </div>
+    <div class="login-container">
+        <div class="login-form">
+            <form>
+                <div class="login-input">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter username">
+                </div>
+                <div class="login-input">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter password">
+                </div>
+                <button type="submit">LOGIN</button>
+                &nbsp;
+            </form>
+            <div class="password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="signup">
+                <p>Don't have an account? <button type="button">Sign Up</button> </p> 
+<!--                <button type="button">Sign Up</button>-->
+            </div>
         </div>
-        
-        
-        <div>
-        </div>
-        
-    </body>
+    </div>
+</body>
 </html>

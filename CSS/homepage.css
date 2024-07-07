@@ -1,0 +1,196 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Jul 3, 2024, 9:37:45 AM
+    Author     : User
+*/
+
+.header h3{
+    font-family: Arial;
+    text-align: center;
+    margin-top: 3%;
+    
+}
+
+.header p{
+    text-align: center;
+    font-family: Arial;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.services h3{
+    font-family: Arial;
+    text-align: center;    
+    background-color: #0A2342;
+    color: white;
+    padding: 15px;
+    
+}
+
+.header h2{
+    font-family: Lucida Calligraphy;
+    text-align: center;
+}
+
+.services h5{
+    font-family: Arial;
+    text-align: center;
+    font-weight: bold;
+}
+
+.services p{
+    font-family: Arial;
+    text-align: center;
+}
+
+.services-content{
+    background-color: #bbdcf0;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+}
+
+.header1 h2{
+    background-color: #0A2342;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.hours-container {
+    font-family: Arial;
+    text-align: center;    
+    background-color: #bbdcf0;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+}
+
+.hours-container h4{
+    font-weight: bold;
+}
+
+.prices h2{
+    background-color: #0A2342;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.price-container h4{
+    font-weight:bold;
+    text-align: center;
+}
+
+.price-container{
+    font-family: Arial;
+    text-align: center;
+    background-color: #bbdcf0;
+    padding: 20px;
+    width: 70%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin:auto;
+    
+}
+
+.price-table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;   
+}
+
+.price-table th, .price-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.price-table td {
+    background-color: #0A2342;
+    color: white;
+}
+
+/* contact us*/
+.contact-us h3{
+    background-color: #0A2342;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.contact-us p{
+    text-align: center;
+    font-family: Arial;
+    font-size: 20px;
+}
+
+.nav-rig{
+/*    margin-right: 5px;
+    margin-left: 80%;
+    margin-top: 2%;*/
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #bbdcf0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    margin-right: 0px;
+    margin-top:0px;
+    width:300px;
+    height:100px;
+}
+
+/*.logopic {
+    margin-right: 0px;
+    margin-top: 0px;
+    width: 50px;
+    height:50px;
+}
+
+.logopic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}*/
+
+.signup {
+    background-color: #003153;
+    color: white;
+    border: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+        margin-left: 60%;
+/*    transition: background-color 0.3s;*/
+}
+
+.login {
+    background-color: #003153;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left:-8px;
+/*    transition: background-color 0.3s;*/
+}
+
+.signup:hover{
+    background-color:#CDF2FE; 
+}
+
+.login:hover{
+    background-color:#CDF2FE; 
+}
+
+
+

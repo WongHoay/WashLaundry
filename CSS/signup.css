@@ -1,0 +1,92 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : May 15, 2024, 2:59:11 PM
+    Author     : User
+*/
+
+ 
+
+.signup-container{
+    background-color: #bbdcf0 ; /*delft blue*/
+    text-align: 'center';
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.singup-input{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius:5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    width: 80%;
+    
+}
+
+.signup-input p{
+    font-family: Arial;
+    font-size: 20px; 
+}
+
+.signup-container h2{
+    font-family: Arial;
+    font-size: 28px;
+}
+
+.signup-header{
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius:5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    width: 80%;
+}
+
+.singup-input label{
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 160%;
+}
+
+.signup-input-form{
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius:5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    width: 70%;   /*470px*/
+    margin:auto;
+    line-height: 160%;
+}
+
+
+.signup-input-form input{
+    width:450px;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.signup-input-form input placeholder{
+    font-size: 14px;
+    font-family: Arial;
+}
+
+.signup-input form button{
+    font-family: Arial;
+    font-size: 16px;
+    border:5px;
+    padding:7px;
+    background-color:#89CFF0; /*baby blue*/
+    border:1px;
+    cursor:pointer;
+    
+}
+
+.singup-input form button:hover{
+    background-color: azure;
+}

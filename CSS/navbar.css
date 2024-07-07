@@ -1,0 +1,42 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : Jun 7, 2024, 10:07:37 PM
+    Author     : User
+*/
+
+.nav-bar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1F305E; /*delft blue*/
+    display: flex; 
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height:auto;
+    z-index: 1000; /* Ensure navbar is above other content */
+    /*justify-content: center; Center the navbar items */
+}
+
+.nav-bar li {
+    display: inline;
+    
+}
+
+.nav-bar li a{
+    color: lightblue;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.nav-bar li a:hover{
+    background-color: azure;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Cart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../CSS/cart.css"/>
+        <link rel="stylesheet" href="../CSS/navbar.css">
+    </head>
+    <body>
+        
+        <ul class="nav-bar">
+            <li><a href="#homepage">Home</a></li>
+            <li><a href="#aboutUs">About Us</a></li>
+            <li><a href="#userprofile">Profile</a></li>
+            <li><a href="#login">Logout</a></li> 
+        </ul>
+        
+        <div class="cart-container">
+        <h2>Your Cart</h2>
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                <!-- Cart items will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <div class="cart-summary">
+            <h3>Summary</h3>
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Cost: <span id="total-cost">RM0.00</span></p>
+            <button class="checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+    </body>
+</html>

@@ -46,10 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     <div class="service-container">
         <h2>Our Service</h2>
         <div class="service-item">
-            <h3>Wash & Fold</h3>
+            <h3>Wash and Fold</h3>
             <p>RM 10 per kg</p>
             <form action="service.php" method="post">
-                <input type="hidden" name="service" value="Wash & Fold">
+                <input type="hidden" name="service" value="Wash and Fold">
                 <input type="hidden" name="price" value="10">
                 <input type="hidden" name="action" value="add">
                 <button type="submit" class="add-to-cart">Add to Cart</button>

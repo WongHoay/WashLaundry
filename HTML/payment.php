@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $filePath = $uploadDir . basename($file['name']);
 
             // Move the uploaded file to the secure directory
-            if (move_uploaded_file($file['tmp_name'], $filePath)) {
+//            if (move_uploaded_file($file['tmp_name'], $filePath)) {
                 // Verify the payment proof (this would be specific to your application)
                 $paymentVerified = verifyPaymentProof($filePath);
 
@@ -42,13 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     $paymentError = 'Payment verification failed. Please try again.';
                 }
-            } else {
-                $paymentError = 'Failed to upload file. Please try again.';
+//            } 
+//            else {
+//                $paymentError = 'Failed to upload file. Please try again.';
             }
         } else {
             $paymentError = 'Invalid file type or file size exceeds limit.';
         }
-    }
+//    }
 
     if (isset($paymentSuccess) && $paymentSuccess) {
         // Clear the cart
@@ -89,37 +90,40 @@ function verifyPaymentProof($filePath) {
         <li><a href="/WashLaundry/HTML/login.php">Logout</a></li>
     </ul> 
     
-    <div class="payment-container">
+    <div class="payment-container" id="payment-container">
         <h2>Payment Options</h2>
         <div class="payment-methods">
             <button type="button" class="payment-option" id="qr-payment-btn" onclick="showQrPaymentForm()">Pay with QR</button>
         </div>
-
-        <div class="payment-forms">
-            <!-- QR Payment -->
-            <div id="qr-payment" class="payment-form">
-                <h3>QR Payment</h3>
-                <p>Scan the QR code to make the payment.</p>
-                <img src="paymentQR.jpg" alt="QR Code">
-                <div class="receipt">
-                    <h3>Receipt</h3>
-                    <div id="receipt-details">
-                        <!-- Receipt details will be dynamically inserted here -->
-                        <form method="post" enctype="multipart/form-data">
-                            <input type="file" id="paymentproof" name="paymentproof" required>
-                            <button type="submit" class="checkout">Submit Payment</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </div>
-
     <script>
+        var temp = 0;
+        
         function showQrPaymentForm() {
-            document.getElementById('qr-payment').style.display = 'block';
+            if (temp == 0) {
+                var div = document.createElement('div');
+                div.innerHTML = `
+                    <h3>QR Payment</h3>
+                    <p>Scan the QR code to make the payment.</p>
+                    <img src="paymentQR.jpg" alt="QR Code">
+                    <div class="receipt">
+                        <h3>Receipt</h3>
+                        <div id="receipt-details">
+                            <!-- Receipt details will be dynamically inserted here -->
+                            <form method="post" enctype="multipart/form-data">
+                                <input type="file" id="paymentproof" name="paymentproof" required>
+                                <button type="submit" class="checkout">Submit Payment</button>
+                            </form>
+                        </div>
+                    </div> 
+                    `
+                const doc = document.getElementById("payment-container");
+                doc.appendChild(div);
+            }
+            temp = 1;
         }
-        showQrPaymentForm(); // Show QR payment form by default
+
     </script>
 </body>
 </html>

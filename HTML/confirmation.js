@@ -34,6 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function redirectToHome() {
-    window.location.href = 'index.html'; // Update to the actual home page URL
+    window.location.href = 'homepage.php'; // Update to the actual home page URL
 }
 

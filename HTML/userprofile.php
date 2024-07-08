@@ -1,4 +1,5 @@
 <?php
+include "dbFunction.php";
 // Start the session
 session_start();
 

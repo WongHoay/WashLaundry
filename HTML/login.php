@@ -20,6 +20,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Validate the credentials
     if (!empty($username) && !empty($password)) {
+        //Establish the database connection
+        $conn= dbConnect();
+        
         // Prepare a select statement
         $sql = "SELECT username, password FROM user WHERE username = ?";
 

@@ -3,17 +3,48 @@ include "dbFunction.php";
 // Start the session
 session_start();
 
-// Placeholder for fetching user data from a database
-// Assume you have a function `getUserData` that fetches user data based on session or some identifier
-function getUserData($username) {
-    // Dummy data for demonstration
-    return [
-        "username" => "Amli Lee",
-        "email" => "ammlee@gmail.com",
-        "phone" => "014 456-4540",
-        "address" => "No2, Jalan Seri Pina 5, 11600 Penang"
-    ];
+ //Placeholder for fetching user data from a database
+ //Assume you have a function `getUserData` that fetches user data based on session or some identifier
+function getUserData($username,$conn) {
+//    // Dummy data for demonstration
+//    return [
+////        "username" => "Amli Lee",
+////        "email" => "ammlee@gmail.com",
+////        "phone" => "014 456-4540",
+////        "address" => "No2, Jalan Seri Pina 5, 11600 Penang"
+////        "username" => "",
+////        "email" => "",
+////        "contact" => "",
+////        "address" => ""
+//            
+//    ];
+//    $pdo = dbConnect();
+//    $stmt = $pdo->prepare('SELECT username, email, phone, address FROM users WHERE username = ?');
+//    $stmt->execute([$username]);
+//    return $stmt->fetch();
+    $sql = "SELECT username, email, contact, address FROM user WHERE username = ?";
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        if ($result->num_rows == 1) {
+            return $result->fetch_assoc();
+        } else {
+            return null;
+        }
+    } else {
+        return null;
+    }
 }
+
+// Check if the user is logged in
+//if (!isset($_SESSION['username'])) {
+//    header("Location: login.php");
+//    exit();
+//}
+
+// Fetch user data
+//$userData = getUserData($_SESSION['username']);
 
 // Check if the user is logged in
 if (!isset($_SESSION['username'])) {
@@ -22,7 +53,10 @@ if (!isset($_SESSION['username'])) {
 }
 
 // Fetch user data
-$userData = getUserData($_SESSION['username']);
+$conn = dbConnect();
+$userData = getUserData($_SESSION['username'], $conn);
+$conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +94,7 @@ $userData = getUserData($_SESSION['username']);
                 </tr>
                 <tr>
                     <td>Phone:</td>
-                    <td><?php echo htmlspecialchars($userData["phone"]); ?></td>
+                    <td><?php echo htmlspecialchars($userData["contact"]); ?></td>
                 </tr>
                 <tr>
                     <td>Address:</td>

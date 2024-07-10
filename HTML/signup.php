@@ -48,6 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($username_err) && empty($email_err) && empty($contact_err) && empty($password_err) && empty($address_err)) {
         // Prepare an insert statement
         $sql = "INSERT INTO user (username, email, contact, password, address) VALUES (?, ?, ?, ?, ?)";
+        
+        $conn= dbConnect();
 
         if ($stmt = $conn->prepare($sql)) {
             // Bind variables to the prepared statement as parameters
@@ -57,9 +59,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $param_username = $username;
             $param_email = $email;
             $param_contact = $contact;
-//            // Create a password hash
-//            $param_password = password_hash($password, PASSWORD_DEFAULT);
-            $param_password = $password;
+            // Create a password hash
+            //$param_password = password_hash($password, PASSWORD_DEFAULT);
+            //$param_password = $password;
+            $param_password = sha1($password);
             $param_address = $address;
 
             // Attempt to execute the prepared statement
